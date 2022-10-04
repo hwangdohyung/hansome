@@ -11,7 +11,7 @@ import matplotlib
 matplotlib.rcParams['font.family'] ='Malgun Gothic'
 matplotlib.rcParams['axes.unicode_minus'] =False
 font_fname = 'C:\Windows\Fonts/gulim.ttc'
-#!!
+#!!##
 def plt_imshow(title='image', img=None, figsize=(8 ,5)):
     plt.figure(figsize=figsize)
  
