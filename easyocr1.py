@@ -11,7 +11,7 @@ import matplotlib
 matplotlib.rcParams['font.family'] ='Malgun Gothic'
 matplotlib.rcParams['axes.unicode_minus'] =False
 font_fname = 'C:\Windows\Fonts/gulim.ttc'
-
+#####
 def plt_imshow(title='image', img=None, figsize=(8 ,5)):
     plt.figure(figsize=figsize)
  
@@ -69,7 +69,7 @@ def make_scan_image(image, width, ksize=(5,5), min_threshold=75, max_threshold=2
   cnts = sorted(cnts, key=cv2.contourArea, reverse=True)
  
   findCnt = None
- 
+  ##
   # 정렬된 contours를 반복문으로 수행하며 4개의 꼭지점을 갖는 도형을 검출
   for c in cnts:
     peri = cv2.arcLength(c, True)

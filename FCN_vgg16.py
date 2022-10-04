@@ -2,7 +2,6 @@ import os
 import zipfile
 import PIL.Image, PIL.ImageFont, PIL.ImageDraw
 import numpy as np
- ##
 import tensorflow as tf
 # import tensorflow_datasets as tfds
 import matplotlib.pyplot as plt
