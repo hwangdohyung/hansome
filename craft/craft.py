@@ -1,4 +1,3 @@
-
 # -*- coding: utf-8 -*-
 import torch
 import torch.nn as nn
@@ -80,5 +79,6 @@ if __name__ == '__main__':
     output, _ = model(torch.randn(1, 3, 768, 768).cuda())
     print(output.shape)
     
-    
-    
+
+
+
