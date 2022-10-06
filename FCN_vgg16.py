@@ -90,7 +90,6 @@ def FCN_VGG16():
     model = tf.keras.Model(inputs=model.input, outputs=x)
     return model
 
-
 # build the model
 model = FCN_VGG16()
 # compile the model
@@ -124,5 +123,6 @@ predict = predict_image('D:\study_data\_data\dataset1\images_prepped_test/0016E5
 # show the image
 plt.imshow(predict)
 plt.show()
+
 
 
