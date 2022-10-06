@@ -14,13 +14,11 @@ import cv2
 import random
 from keras.preprocessing.image import ImageDataGenerator
 
-
 # download the dataset (fcnn-dataset.zip)
 
 # pixel labels in the video frames
 class_names = ['sky', 'building','column/pole', 'road', 
                'side walk', 'vegetation', 'traffic light', 'fence', 'vehicle', 'pedestrian', 'bicyclist', 'void']
-
 
 train_image_path = 'D:\study_data\_data\dataset1/images_prepped_train/'
 train_label_path = 'D:\study_data\_data\dataset1/annotations_prepped_train/'
@@ -47,7 +45,6 @@ test_image_list, test_label_list = load_data(test_image_path, test_label_path)
 # shuffle the train dataset
 train_image_list = tf.random.shuffle(train_image_list)
 train_label_list = tf.random.shuffle(train_label_list)
-
 
 # load the image and label
 def load_image_label(image_path, label_path):
@@ -127,3 +124,5 @@ predict = predict_image('D:\study_data\_data\dataset1\images_prepped_test/0016E5
 # show the image
 plt.imshow(predict)
 plt.show()
+
+

@@ -1,5 +1,4 @@
 
-# -*- coding: utf-8 -*-
 import numpy as np
 import cv2
 import math
@@ -27,6 +26,7 @@ def getDetBoxes_core(textmap, linkmap, text_threshold, link_threshold, low_text)
 
     det = []
     mapper = []
+    
     for k in range(1,nLabels):
         # size filtering
         size = stats[k, cv2.CC_STAT_AREA]

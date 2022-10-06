@@ -17,7 +17,6 @@ craft.unload_refinenet_model()
 
 ############### Advanced Usage ####################
 
-
 # import craft functions
 from craft_text_detector import (
     read_image,

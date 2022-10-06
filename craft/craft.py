@@ -1,8 +1,6 @@
-# -*- coding: utf-8 -*-
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-
 from basenet.vgg16_bn import vgg16_bn, init_weights
 
 class double_conv(nn.Module):
@@ -16,11 +14,9 @@ class double_conv(nn.Module):
             nn.BatchNorm2d(out_ch),
             nn.ReLU(inplace=True)
         )
-
     def forward(self, x):
         x = self.conv(x)
         return x
-
 
 class CRAFT(nn.Module):
     def __init__(self, pretrained=False, freeze=False):
@@ -78,7 +74,6 @@ if __name__ == '__main__':
     model = CRAFT(pretrained=True).cuda()
     output, _ = model(torch.randn(1, 3, 768, 768).cuda())
     print(output.shape)
-    
-
-
+path = 'D:\image/'
+res = model(path+ 'Capture001.jpg')
 
