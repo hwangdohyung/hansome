@@ -379,7 +379,7 @@ annotation = annotation.numpy()
 score = iou(annotation[0], pred[0]) # 0.0
 print(annotation[0].shape) # (224, 224, 1)
 print(pred[0].shape) # (224, 224, 12)
-exit()
+
 print('iou score = ', score)
 
 pred = np.argmax(pred, axis=3) # (batch_size, 224, 224)

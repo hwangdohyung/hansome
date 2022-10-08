@@ -58,3 +58,5 @@ class RefineNet(nn.Module):
         #out = torch.add([aspp1, aspp2, aspp3, aspp4], dim=1)
         out = aspp1 + aspp2 + aspp3 + aspp4
         return out.permute(0, 2, 3, 1)  # , refine.permute(0,2,3,1)
+
+
