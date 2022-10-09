@@ -33,7 +33,6 @@ test_label_path = 'D:\study_data\_data\dataset1/annotations_prepped_test/'
 BATCH_SIZE = 16
 
 
-
 def map_filename_to_image_and_mask(t_filename, a_filename, height=224, width=224):
     '''
     Preprocesses the dataset by:
@@ -422,7 +421,7 @@ for i in range(3):
     ax[2].set_title('Predicted Label Map')
     plt.show()
 
-
+fcnn.summary()
 
 # Model: "vgg16"
 # _________________________________________________________________ 
@@ -471,3 +470,6 @@ for i in range(3):
 # Trainable params: 14,714,688
 # Non-trainable params: 0
 # _________________________________________________________________
+
+
+

@@ -24,14 +24,12 @@ from keras.preprocessing.image import ImageDataGenerator
 class_names = ['sky', 'building','column/pole', 'road', 
                'side walk', 'vegetation', 'traffic light', 'fence', 'vehicle', 'pedestrian', 'bicyclist', 'void']
 
-
 train_image_path = 'D:\study_data\_data\dataset1/images_prepped_train/'
 train_label_path = 'D:\study_data\_data\dataset1/annotations_prepped_train/'
 test_image_path = 'D:\study_data\_data\dataset1/images_prepped_test/'
 test_label_path = 'D:\study_data\_data\dataset1/annotations_prepped_test/'
  
 BATCH_SIZE = 16
-
 
 def map_filename_to_image_and_mask(t_filename, a_filename, height=224, width=224):
     '''
