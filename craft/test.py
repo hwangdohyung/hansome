@@ -165,3 +165,4 @@ if __name__ == '__main__':
     print("elapsed time : {}s".format(time.time() - t))
 
 
+# python C:\handsome\craft/test.py --trained_model=[D:\craft_mlt_25k.pth] --test_folder=[D:\image/]
