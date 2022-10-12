@@ -38,3 +38,5 @@ if __name__ == "__main__":
     loss_fn = MSE_OHEM_Loss()
     loss = loss_fn(y, x)
     print(loss)
+    
+    

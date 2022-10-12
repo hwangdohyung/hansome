@@ -6,7 +6,7 @@ from torch.utils.data import Dataset, DataLoader
 from PIL import Image
 import numpy as np
 
-from luo import TicToc
+import TicToc
 from torchvision import transforms
 from models import network
 from models import ohem

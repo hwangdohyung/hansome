@@ -67,11 +67,7 @@ class CRAFT(nn.Module):
         feature = self.upconv4(y)
 
         y = self.conv_cls(feature)
-        print(feature)
-        print(feature.shape)
-        print('=========================================================')
-        print(y)
-        print(y.shape)
+
         return y.permute(0,2,3,1), feature
         
 

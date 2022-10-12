@@ -6,7 +6,7 @@ from torch.utils.data import Dataset, DataLoader
 from PIL import Image
 import numpy as np
 
-from luo import TicToc
+from pytictoc import TicToc
 
 from models import network
 from dataset import SynthText
