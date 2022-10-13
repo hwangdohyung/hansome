@@ -28,6 +28,7 @@ class vgg16_bn(torch.nn.Module):
         self.slice3 = torch.nn.Sequential()
         self.slice4 = torch.nn.Sequential()
         self.slice5 = torch.nn.Sequential()
+        
         for x in range(12):         # conv2_2
             self.slice1.add_module(str(x), vgg_pretrained_features[x])
         for x in range(12, 19):         # conv3_3
@@ -70,7 +71,6 @@ class vgg16_bn(torch.nn.Module):
         vgg_outputs = namedtuple("VggOutputs", ['fc7', 'relu5_3', 'relu4_3', 'relu3_2', 'relu2_2'])
         out = vgg_outputs(h_fc7, h_relu5_3, h_relu4_3, h_relu3_2, h_relu2_2)
         return out
-
 
 
 
