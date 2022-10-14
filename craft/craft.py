@@ -48,22 +48,22 @@ class CRAFT(nn.Module):
        
     def forward(self, x):
         """ Base network """
-        sources = self.basenet(x)
+        vgg16 = self.basenet(x)
 
         """ U network """
-        y = torch.cat([sources[0], sources[1]], dim=1)
+        y = torch.cat([vgg16[0], vgg16[1]], dim=1)
         y = self.upconv1(y)
 
-        y = F.interpolate(y, size=sources[2].size()[2:], mode='bilinear', align_corners=False)
-        y = torch.cat([y, sources[2]], dim=1)
+        y = F.interpolate(y, size=vgg16[2].size()[2:], mode='bilinear', align_corners=False)
+        y = torch.cat([y, vgg16[2]], dim=1)
         y = self.upconv2(y)
 
-        y = F.interpolate(y, size=sources[3].size()[2:], mode='bilinear', align_corners=False)
-        y = torch.cat([y, sources[3]], dim=1)
+        y = F.interpolate(y, size=vgg16[3].size()[2:], mode='bilinear', align_corners=False)
+        y = torch.cat([y, vgg16[3]], dim=1)
         y = self.upconv3(y)
 
-        y = F.interpolate(y, size=sources[4].size()[2:], mode='bilinear', align_corners=False)
-        y = torch.cat([y, sources[4]], dim=1)
+        y = F.interpolate(y, size=vgg16[4].size()[2:], mode='bilinear', align_corners=False)
+        y = torch.cat([y, vgg16[4]], dim=1)
         feature = self.upconv4(y)
 
         y = self.conv_cls(feature)
