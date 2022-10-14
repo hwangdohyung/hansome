@@ -71,3 +71,5 @@ class CRAFT(nn.Module):
         return y.permute(0,2,3,1), feature
        
 
+
+
