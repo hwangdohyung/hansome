@@ -49,28 +49,23 @@ class vgg16_bn(torch.nn.Module):
                 nn.Conv2d(1024, 1024, kernel_size=1)
         )
 
-        if not pretrained:
-            init_weights(self.slice1.modules())
-            init_weights(self.slice2.modules())
-            init_weights(self.slice3.modules())
-            init_weights(self.slice4.modules())
-
         init_weights(self.slice5.modules())        # no pretrained model for fc6 and fc7
 
-        if freeze:
-            for param in self.slice1.parameters():      # only first conv
-                param.requires_grad = False
-  
+
         
     def forward(self, X):
         h = self.slice1(X)
         h_relu2_2 = h
+        
         h = self.slice2(h)
         h_relu3_2 = h
+        
         h = self.slice3(h)
         h_relu4_3 = h
+        
         h = self.slice4(h)
         h_relu5_3 = h
+        
         h = self.slice5(h)
         h_fc7 = h
         vgg_outputs = namedtuple("VggOutputs", ['fc7', 'relu5_3', 'relu4_3', 'relu3_2', 'relu2_2'])
