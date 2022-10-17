@@ -64,11 +64,11 @@ class CRAFT(nn.Module):
 
         y = F.interpolate(y, size=vgg16[4].size()[2:], mode='bilinear')
         y = torch.cat([y, vgg16[4]], dim=1)
-        feature = self.upconv4(y)
+        y = self.upconv4(y)
 
-        y = self.conv_cls(feature)
+        y = self.conv_cls(y)
 
-        return y.permute(0,2,3,1), feature
+        return y
     
 
    

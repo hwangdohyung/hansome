@@ -6,7 +6,6 @@ import torch.nn.init as init
 from torchvision import models
 from torchvision.models.vgg import model_urls
 
-
 def init_weights(modules):
     for m in modules:
         if isinstance(m, nn.Conv2d):
@@ -19,7 +18,6 @@ def init_weights(modules):
         elif isinstance(m, nn.Linear):
             m.weight.data.normal_(0, 0.01)
             m.bias.data.zero_()
-
 
 class vgg16_bn(torch.nn.Module):
     def __init__(self, pretrained=True, freeze=True):
@@ -77,6 +75,7 @@ class vgg16_bn(torch.nn.Module):
         
         h = self.slice5(h)
         h_fc7 = h
+        
         vgg_outputs = namedtuple("VggOutputs", ['fc7', 'relu5_3', 'relu4_3', 'relu3_2', 'relu2_2'])
         out = vgg_outputs(h_fc7, h_relu5_3, h_relu4_3, h_relu3_2, h_relu2_2)
         return out
