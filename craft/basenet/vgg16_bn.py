@@ -59,7 +59,7 @@ class vgg16_bn(torch.nn.Module):
             for param in self.slice1.parameters():      # only first conv
                 param.requires_grad = False
   
-        
+    
     def forward(self, X):
         h = self.slice1(X)
         s1 = h
