@@ -166,3 +166,5 @@ if __name__ == '__main__':
 
 
 # python C:\handsome\craft/test.py --trained_model=[D:\craft_mlt_25k.pth] --test_folder=[D:\image/]
+
+
