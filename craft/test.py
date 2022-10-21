@@ -3,14 +3,11 @@ import sys
 import os
 import time
 import argparse
-
 import torch
 import torch.nn as nn
 import torch.backends.cudnn as cudnn
 from torch.autograd import Variable
-
 from PIL import Image
-
 import cv2
 from skimage import io
 import numpy as np
