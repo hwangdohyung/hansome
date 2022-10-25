@@ -41,3 +41,19 @@ image_path               	predicted_labels         	confidence score
 ./crnn/demo_image/crop_12.png	구일                       	0.9435
 ./crnn/demo_image/crop_13.png	신당                       	0.7259
 ./crnn/demo_image/crop_14.png	망원                       	0.9780
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+./crnn/demo_image/crop_0.png	멍충                       	0.1003
+./crnn/demo_image/crop_1.png	바씀                       	0.0390
+./crnn/demo_image/crop_2.png	정민                       	0.7630
+./crnn/demo_image/crop_5.png	박정인                      	0.9853
+./crnn/demo_image/crop_6.png	이형권                      	0.9826
+./crnn/demo_image/crop_7.png	활도형                      	0.4446
+./crnn/demo_image/crop_8.png	전민기                      	0.9052
+./crnn/demo_image/crop_9.png	안결                       	0.6117
+./crnn/demo_image/crop_10.png	서울                       	0.9989
+./crnn/demo_image/crop_11.png	종로                       	0.9997
+./crnn/demo_image/crop_12.png	구일                       	0.9435
+./crnn/demo_image/crop_13.png	신당                       	0.7259
+./crnn/demo_image/crop_14.png	망원                       	0.9780
