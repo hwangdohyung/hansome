@@ -169,3 +169,5 @@ python ./crnn/demo.py --Transformation TPS --FeatureExtraction ResNet --Sequence
 # ./crnn/demo_image/crop_12.png   구일                            0.9435
 # ./crnn/demo_image/crop_13.png   신당                            0.7258
 # ./crnn/demo_image/crop_14.png   망원                            0.9780
+
+

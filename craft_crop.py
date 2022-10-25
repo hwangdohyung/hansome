@@ -1,21 +1,19 @@
 # import Craft class
 from craft_text_detector import Craft
 
-# set image path and export folder directory
-image = 'D:\/Capture001.png' # can be filepath, PIL image or numpy array
-output_dir = './ocr/outputs/'
+# # set image path and export folder directory
+# image = 'figures/idcard.png' # can be filepath, PIL image or numpy array
+# output_dir = 'D:\outputs/'
 
-# create a craft instance
-craft = Craft(output_dir=output_dir, crop_type="poly", cuda=False)
+# # create a craft instance
+# craft = Craft(output_dir=output_dir, crop_type="poly", cuda=False)
 
-# apply craft text detection and export detected regions to output directory
-prediction_result = craft.detect_text(image)
+# # apply craft text detection and export detected regions to output directory
+# prediction_result = craft.detect_text(image)
 
-# unload models from ram/gpu
-craft.unload_craftnet_model()
-craft.unload_refinenet_model()
-
-############### Advanced Usage ####################
+# # unload models from ram/gpu
+# craft.unload_craftnet_model()
+# craft.unload_refinenet_model()
 
 # import craft functions
 from craft_text_detector import (
@@ -28,9 +26,10 @@ from craft_text_detector import (
     empty_cuda_cache
 )
 
-# set image path and export folder directory
-image = 'D:\/Capture001.png' # can be filepath, PIL image or numpy array
-output_dir = './ocr/outputs/'
+## set image path and export folder directory
+# image = 'D:\Sample\HW-OCR/4.Validation\P.Paper\R.Free/IMG_OCR_53_4PR_95725.png' # can be filepath, PIL image or numpy array
+image = 'D:\image/123.png' # can be filepath, PIL image or numpy array
+output_dir = 'D:/image/'
 
 # read image
 image = read_image(image)
@@ -69,4 +68,3 @@ export_extra_results(
 
 # unload models from gpu
 empty_cuda_cache()
-
