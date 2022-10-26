@@ -4,7 +4,6 @@ import torch.nn as nn
 import torch.nn.functional as F
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-
 class TPS_SpatialTransformerNetwork(nn.Module):
     """ Rectification Network of RARE, namely TPS based STN """
 
@@ -162,3 +161,6 @@ class GridGenerator(nn.Module):
         batch_T = torch.bmm(batch_inv_delta_C, batch_C_prime_with_zeros)  # batch_size x F+3 x 2
         batch_P_prime = torch.bmm(batch_P_hat, batch_T)  # batch_size x n x 2
         return batch_P_prime  # batch_size x n x 2
+
+
+

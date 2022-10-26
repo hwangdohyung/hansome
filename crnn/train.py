@@ -10,8 +10,8 @@ import torch.backends.cudnn as cudnn
 import torch.nn.init as init
 import torch.optim as optim
 import torch.utils.data
-import numpy as np
 
+import numpy as np
 from utils import CTCLabelConverter, CTCLabelConverterForBaiduWarpctc, AttnLabelConverter, Averager
 from dataset import hierarchical_dataset, AlignCollate, Batch_Balanced_Dataset
 from model import Model
@@ -342,3 +342,6 @@ if __name__ == '__main__':
         """
 
     train(opt)
+
+
+
