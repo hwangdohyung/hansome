@@ -1,7 +1,6 @@
 import torch
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-
 class CTCLabelConverter(object):
     """ Convert between text-label and text-index """
 
@@ -167,3 +166,5 @@ class Averager(object):
         if self.n_count != 0:
             res = self.sum / float(self.n_count)
         return res
+
+
