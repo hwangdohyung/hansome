@@ -21,7 +21,6 @@ from modules.feature_extraction import VGG_FeatureExtractor, RCNN_FeatureExtract
 from modules.sequence_modeling import BidirectionalLSTM
 from modules.prediction import Attention
 
-
 class Model(nn.Module):
 
     def __init__(self, opt):
@@ -90,3 +89,5 @@ class Model(nn.Module):
             prediction = self.Prediction(contextual_feature.contiguous(), text, is_train, batch_max_length=self.opt.batch_max_length)
 
         return prediction
+
+ 
