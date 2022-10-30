@@ -25,7 +25,7 @@ class VGG_FeatureExtractor(nn.Module):
 
     def forward(self, input):
         return self.ConvNet(input)
-  
+
 
 class RCNN_FeatureExtractor(nn.Module):
     """ FeatureExtractor of GRCNN (https://papers.nips.cc/paper/6637-gated-recurrent-convolution-neural-network-for-ocr.pdf) """
@@ -243,5 +243,6 @@ class ResNet(nn.Module):
         x = self.relu(x)
 
         return x
+
 
 
