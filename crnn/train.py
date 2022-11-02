@@ -16,6 +16,7 @@ from utils import CTCLabelConverter, CTCLabelConverterForBaiduWarpctc, AttnLabel
 from dataset import hierarchical_dataset, AlignCollate, Batch_Balanced_Dataset
 from model import Model
 from test import validation
+
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 
@@ -342,6 +343,7 @@ if __name__ == '__main__':
         """
 
     train(opt)
+
 
 
 
