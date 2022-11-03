@@ -250,6 +250,7 @@ if __name__ == '__main__':
     parser.add_argument('--eps', type=float, default=1e-8, help='eps for Adadelta. default=1e-8')
     parser.add_argument('--grad_clip', type=float, default=5, help='gradient clipping value. default=5')
     parser.add_argument('--baiduCTC', action='store_true', help='for data_filtering_off mode')
+    
     """ Data processing """
     parser.add_argument('--select_data', type=str, default='/',
                         help='select training data (default is MJ-ST, which means MJ and ST used as training data)')

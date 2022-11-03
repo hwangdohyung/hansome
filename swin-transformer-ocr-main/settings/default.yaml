@@ -1,9 +1,9 @@
 # Input/Output/Name
-image_dir: "dataset/images"
-train_data: "dataset/train.txt"
-val_data: "dataset/val.txt"
-tokenizer: "dataset/tokenizer.pkl"
-save_path: "checkpoints"
+image_dir: "./swin-transformer-ocr-main/dataset/images/"
+train_data: "./swin-transformer-ocr-main/dataset/train.txt"
+val_data: "./swin-transformer-ocr-main/dataset/val.txt"
+tokenizer: "./swin-transformer-ocr-main/dataset/tokenizer.pkl"
+save_path: "./swin-transformer-ocr-main/checkpoints"
 name: "transformer-ocr test"
 
 epochs: 20

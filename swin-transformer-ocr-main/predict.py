@@ -45,3 +45,4 @@ if __name__ == "__main__":
         print("[{}]sec | image_fn : {}".format(time.time()-start, model.predict(x)))
 
 
+# python predict.py --setting <your_setting.yaml> --target <image_or_directory> --tokenizer <your_tokenizer_pkl> --checkpoint <saved_checkpoint>

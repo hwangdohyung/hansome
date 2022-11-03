@@ -39,7 +39,7 @@ In `settings/` directory, you can find `default.yaml`. You can set almost every 
 python run.py --version 0 --setting settings/default.yaml --num_workers 16 --batch_size 128
 ```
 You can check your training log with tensorboard.  
-```
+````
 tensorboard --log_dir tb_logs --bind_all
 ```  
 
