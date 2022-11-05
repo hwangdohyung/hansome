@@ -80,6 +80,3 @@ if __name__ == "__main__":
 # python C:\handsome\swin-transformer-ocr-main/run.py --version 0 --setting C:\handsome\swin-transformer-ocr-main/settings/default.yaml --num_workers 16 --batch_size 128
 
 
-
-
-
