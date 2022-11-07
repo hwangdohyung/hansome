@@ -1,0 +1,65 @@
+# Input/Output/Name
+image_dir: "./swin-transformer-ocr-main/dataset/images/"
+train_data: "./swin-transformer-ocr-main/dataset/train.txt"
+val_data: "./swin-transformer-ocr-main/dataset/val.txt"
+tokenizer: "./transformer-ocr-mian/dataset/tokenizer.pkl"
+output_path: "./transformer-ocr-main/outputs"
+model_path: "./transformer-ocr-main/checkpoints/"
+load_chkpt: null # continue training
+name: "transformer-ocr test"
+
+# Training parameters
+epochs: 60
+batchsize: 128
+
+# Testing parameters
+testbatchsize: 20
+valbatches: 100
+temperature: 0.2
+
+# Optimizer configurations
+optimizer: "AdamW"
+scheduler: "CosineAnnealingWarmUpRestarts"
+lr: 0.0
+T_0: 20
+T_mult: 2.0
+eta_max: 0.003
+T_up: 1
+gamma: 0.5
+
+# Parameters for model architectures
+max_width: 672
+max_height: 192
+min_width: 96
+min_height: 32
+channels: 3
+patch_size: [6,14]
+
+# Encoder / Decoder
+dim: 256
+backbone_layers: [3,4,9]
+encoder_depth: 4
+num_layers: 4
+decoder_cfg: 
+  cross_attend: true
+  ff_glu: false
+  attn_on_attn: false
+  use_scalenorm: false
+  rel_pos_bias: false
+heads: 8
+max_seq_len: 64
+
+# Other
+seed: 42
+id: null
+sample_freq: 3000
+test_samples: 5
+save_freq: 5 # save every nth epoch
+debug: False
+pad: False
+
+# Token ids
+pad_token: 0
+bos_token: 1
+eos_token: 2
+oov_token: 3
