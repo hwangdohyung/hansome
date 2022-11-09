@@ -1,11 +1,9 @@
 import torch
 import pytorch_lightning as pl
 import argparse
-
 from models import TransformerOCR
 from dataset import CustomDataset, CustomCollate, Tokenizer
 from utils import load_setting, save_tokenizer, CustomTensorBoardLogger
-
 from torch.utils.data import DataLoader
 
 if __name__ == "__main__":
@@ -74,4 +72,5 @@ if __name__ == "__main__":
 
 
 # python ./transformer-ocr-main/run.py --setting ./transformer-ocr-main/settings/default.yaml --version 0 --max_epochs 100 --num_workers 16 --batch_size 128
+
 
