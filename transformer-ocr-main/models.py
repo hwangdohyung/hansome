@@ -213,3 +213,5 @@ class CustomVisionTransformer(VisionTransformer):
         x = self.blocks(x)
         x = self.norm(x)
         return x
+    
+   

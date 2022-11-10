@@ -202,3 +202,5 @@ class CustomARWrapper(AutoregressiveWrapper):
 
         self.net.train(was_training)
         return out
+
+
