@@ -21,22 +21,22 @@ x = transform(img)
 x = x.unsqueeze(0) # add batch dim
 # print(x.shape)
 
-# patch_size = 16 # 16 pixels
-# pathes = rearrange(x, 'b c (h s1) (w s2) -> b (h w) (s1 s2 c)', s1=patch_size, s2=patch_size)
+patch_size = 16 # 16 pixels
+pathes = rearrange(x, 'b c (h s1) (w s2) -> b (h w) (s1 s2 c)', s1=patch_size, s2=patch_size)
 
-# class PatchEmbedding(nn.Module):
-#     def __init__(self, in_channels: int = 4, patch_size: int = 16, emb_size: int = 768):
-#         self.patch_size = patch_size
-#         super().__init__()
-#         self.projection = nn.Sequential(
-#             # break-down the image in s1 x s2 patches and flat them
-#             Rearrange('b c (h s1) (w s2) -> b (h w) (s1 s2 c)', s1=patch_size, s2=patch_size),
-#             nn.Linear(patch_size * patch_size * in_channels, emb_size)
-#         )
+class PatchEmbedding(nn.Module):
+    def __init__(self, in_channels: int = 4, patch_size: int = 16, emb_size: int = 768):
+        self.patch_size = patch_size
+        super().__init__()
+        self.projection = nn.Sequential(
+            # break-down the image in s1 x s2 patches and flat them
+            Rearrange('b c (h s1) (w s2) -> b (h w) (s1 s2 c)', s1=patch_size, s2=patch_size),
+            nn.Linear(patch_size * patch_size * in_channels, emb_size)
+        )
                 
-#     def forward(self, x: Tensor) -> Tensor:
-#         x = self.projection(x)
-#         return x
+    def forward(self, x: Tensor) -> Tensor:
+        x = self.projection(x)
+        return x
 
 class PatchEmbedding(nn.Module):
     def __init__(self, in_channels: int = 3, patch_size: int = 16, emb_size: int = 768):
