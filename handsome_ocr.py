@@ -1,5 +1,6 @@
 # import Craft class
 from craft_text_detector import Craft
+from deep-text-recognition-benchmark-vit import infer, demo
 
 # set image path and export folder directory
 image = 'D:\/Capture001.png' # can be filepath, PIL image or numpy array
@@ -30,7 +31,7 @@ from craft_text_detector import (
 )
 
 # set image path and export folder directory
-image = 'D:\/Capture001.png' # can be filepath, PIL image or numpy array
+image = 'D:/Capture001.png' # can be filepath, PIL image or numpy array
 output_dir = './ocr/outputs/'
 
 # read image
