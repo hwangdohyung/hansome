@@ -2,19 +2,19 @@
 from craft_text_detector import Craft
 from deep-text-recognition-benchmark-vit import infer, demo
 
-# set image path and export folder directory
-image = 'D:\/Capture001.png' # can be filepath, PIL image or numpy array
-output_dir = './ocr/outputs/'
+# # set image path and export folder directory
+# image = 'D:\/Capture001.png' # can be filepath, PIL image or numpy array
+# output_dir = './ocr/outputs/'
 
-# create a craft instance
-craft = Craft(output_dir=output_dir, crop_type="poly", cuda=False)
+# # create a craft instance
+# craft = Craft(output_dir=output_dir, crop_type="poly", cuda=False)
 
-# apply craft text detection and export detected regions to output directory
-prediction_result = craft.detect_text(image)
+# # apply craft text detection and export detected regions to output directory
+# prediction_result = craft.detect_text(image)
 
-# unload models from ram/gpu
-craft.unload_craftnet_model()
-craft.unload_refinenet_model()
+# # unload models from ram/gpu
+# craft.unload_craftnet_model()
+# craft.unload_refinenet_model()
 
 ############### Advanced Usage ####################
 
@@ -31,8 +31,13 @@ from craft_text_detector import (
 )
 
 # set image path and export folder directory
+<<<<<<< Updated upstream:handsome_ocr.py
 image = 'D:/Capture001.png' # can be filepath, PIL image or numpy array
 output_dir = './ocr/outputs/'
+=======
+image = 'C:\hansome\KakaoTalk_Photo_2022-11-28-18-43-51.jpeg' # can be filepath, PIL image or numpy array
+output_dir = './craft/outputs/'
+>>>>>>> Stashed changes:ocr_craft.py
 
 # read image
 image = read_image(image)
@@ -72,3 +77,4 @@ export_extra_results(
 # unload models from gpu
 empty_cuda_cache()
 
+# python C:\hansome\deep-text-recognition-benchmark-vit\infer.py --image C:\hansome\deep-text-recognition-benchmark-vit\demo_image/ --saved_model C:\hansome\deep-text-recognition-benchmark-vit\saved_models/vitstr_tiny_patch16_224-Seed1111/best_accuracy.pth --model C:\hansome\deep-text-recognition-benchmark-vit/vitstr_tiny_patch16_224.pth --Transformer --Transformation None
