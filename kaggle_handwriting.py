@@ -18,6 +18,7 @@ from keras.layers import Dense, Activation, Flatten, Dense,MaxPooling2D, Dropout
 from keras.layers import Conv2D, MaxPooling2D, BatchNormalization
 
 
+##
 dir = "D:\ocr\kaggle_ocr\\train/"
 train_data = []
 img_size = 32
